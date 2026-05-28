@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseMechanoidWalker">
+        <defName>Mech_Bulwarkon</defName>
+        <label>BulwarkonMechanoid</label>
+        <description>description BulwarkonMechanoid</description>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+            <MoveSpeed>5</MoveSpeed>
+            <EnergyShieldRechargeRate>0.25</EnergyShieldRechargeRate>
+            <EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>
+            <BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">2</BandwidthCost>
+            <ControlTakingTime>18</ControlTakingTime>
+        </statBases>
+        <tools>
+            <li>
+                <label>left fist</label>
+                <labelNoLocation>fist</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>right fist</label>
+                <labelNoLocation>fist</labelNoLocation>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12.0</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8.5</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <race>
+            <thinkTreeMain>BulWarkonMechanoid_ThinkTree</thinkTreeMain>
+            <body>BulwarkonMechanoid_Body</body>
+            <baseHealthScale>0.72</baseHealthScale>
+            <detritusLeavings>
+                <li>
+                    <def>ChunkMechanoidSlag</def>
+                    <texOverrideIndex>11</texOverrideIndex>
+                    <spawnChance>0.1</spawnChance>
+                </li>
+                <li>
+                    <def>ChunkMechanoidSlag</def>
+                    <texOverrideIndex>12</texOverrideIndex>
+                    <spawnChance>0.1</spawnChance>
+                </li>
+            </detritusLeavings>
+        </race>
+        <comps>
+            <li Class="BM_BulwarkonMechanoid.Comps.CompProperties_BulwarkonShieldInterceptor">
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.4, 0.4, 0.4)</color>
+                <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+                <activeSound>BulletShield_Ambience</activeSound>
+                <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+                <drawWithNoSelection>True</drawWithNoSelection>
+                <gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

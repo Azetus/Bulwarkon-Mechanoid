@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <JobDef>
+        <defName>BM_ReloadShieldProjector</defName>
+        <driverClass>BM_BulwarkonMechanoid.Jobs.JobDriver_ReloadAbility</driverClass>
+        <reportString>reloading shield projector.</reportString>
+    </JobDef>
+</Defs>

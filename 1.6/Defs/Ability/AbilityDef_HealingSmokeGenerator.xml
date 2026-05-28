@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <AbilityDef>
+        <defName>BM_DeployHealingSmokeGenerator</defName>
+        <label>deploy healing smoke generator</label>
+        <description>Deploy a healing smoke generator at the caster''s feet. The generator continuously tends wounds and heals anyone within its radius for 30 seconds.\n\nHas 3 charges. Can be reloaded by consuming glitterworld medicine (right-click to reload).</description>
+        <charges>3</charges>
+        <targetRequired>false</targetRequired>
+        <abilityClass>BM_BulwarkonMechanoid.CustomAbility.Ability_Reloadable</abilityClass>
+        <gizmoClass>BM_BulwarkonMechanoid.Gizmos.Command_AbilityWithReload</gizmoClass>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>1</warmupTime>
+            <requireLineOfSight>false</requireLineOfSight>
+            <drawAimPie>false</drawAimPie>
+            <range>3.9</range>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="BM_BulwarkonMechanoid.AbilityEffects.CompProperties_DeployHealingSmokeGenerator">
+                <smokeGeneratorDef>BM_HealingSmokeGenerator</smokeGeneratorDef>
+                <baseReloadTicks>60</baseReloadTicks>
+                <deployEffect>BM_HealingSmoke_Activate</deployEffect>
+                <deploySound>Broadshield_Startup</deploySound>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

@@ -3,7 +3,7 @@ using Verse;
 
 namespace BM_BulwarkonMechanoid.CustomAbility;
 
-public class Ability_Reloadable : RimWorld.Ability
+public class Ability_Reloadable : Ability
 {
     public Ability_Reloadable()
     {

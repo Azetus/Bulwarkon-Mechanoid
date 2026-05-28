@@ -12,8 +12,6 @@ public class CompAbilityEffect_DeployBulwarkonShieldProjector : CompAbilityEffec
     public new CompProperties_DeployBulwarkonShieldProjector Props =>
         (CompProperties_DeployBulwarkonShieldProjector)props;
 
-    public override bool ShouldHideGizmo => true;
-
     #region IReloadableComp
 
     public Thing ReloadableThing => parent.pawn;

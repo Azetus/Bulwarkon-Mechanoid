@@ -1,4 +1,5 @@
 ﻿using BM_BulwarkonMechanoid.Settings;
+using BM_BulwarkonMechanoid.Settings.ModSettingUI;
 using UnityEngine;
 using Verse;
 
@@ -22,5 +23,7 @@ public class BulwarkonMechanoid : Mod
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
+        base.DoSettingsWindowContents(inRect);
+        ModSettingDrawer.Draw(inRect);
     }
 }

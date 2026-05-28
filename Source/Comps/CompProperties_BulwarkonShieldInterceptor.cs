@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 
 namespace BM_BulwarkonMechanoid.Comps;
 
@@ -6,10 +6,11 @@ public class CompProperties_BulwarkonShieldInterceptor : CompProperties_Projecti
 {
     public CompProperties_BulwarkonShieldInterceptor()
     {
-        compClass = typeof(CompProjectileInterceptor);
+        compClass = typeof(CompBulwarkonShieldInterceptor);
         radius = BulwarkonMechanoid.settings.ShieldRadius;
         hitPoints = BulwarkonMechanoid.settings.ShieldHitPoints;
         chargeDurationTicks = BulwarkonMechanoid.settings.chargeDurationTicks;
-        disarmedByEmpForTicks = 0;
+        rechargeHitPointsIntervalTicks = BulwarkonMechanoid.settings.ShieldRechargeIntervalTicks;
+        disarmedByEmpForTicks = BulwarkonMechanoid.settings.DisarmedByEmpForTicks;
     }
 }

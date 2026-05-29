@@ -99,7 +99,7 @@ public class CompAbilityEffect_DeployBulwarkonShieldProjector : CompAbilityEffec
         if (ammo.NullOrEmpty())
         {
             if (showMessages)
-                Messages.Message("BM_NoShieldCoreAvailable".Translate(), pawn,
+                Messages.Message("BM_NoAmmoAvailable".Translate(reloadable.AmmoDef.label), pawn,
                     MessageTypeDefOf.RejectInput, false);
             return;
         }

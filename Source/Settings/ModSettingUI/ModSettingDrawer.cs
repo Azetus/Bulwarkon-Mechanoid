@@ -16,7 +16,7 @@ public class ModSettingDrawer
         listing.Begin(inRect);
 
         GUI.color = Color.yellow;
-        Widgets.Label(listing.GetRect(30f), "BM_RestartWarning".Translate());
+        Widgets.Label(listing.GetRect(30f), "BM_SettingsHint".Translate());
         GUI.color = Color.white;
 
         listing.Gap(Gap);
@@ -33,34 +33,34 @@ public class ModSettingDrawer
 
         listing.Gap(Gap);
 
-        DrawIntSliderRow(listing, "BM_ShieldRegenPerInterval_Temp".Translate(), ref BulwarkonMechanoid.settings.ShieldHitPointsPerInterval, 1, 100);
+        DrawIntSliderRow(listing, "BM_ShieldRegenPerInterval".Translate(), ref BulwarkonMechanoid.settings.ShieldHitPointsPerInterval, 1, 100);
 
         listing.Gap(Gap);
 
-        DrawIntSliderRow(listing, "BM_ShieldRechargeIntervalTicks_Temp".Translate(), ref BulwarkonMechanoid.settings.RechargeHitPointsIntervalTicks, 1, 1800);
+        DrawIntSliderRow(listing, "BM_ShieldRechargeIntervalTicks".Translate(), ref BulwarkonMechanoid.settings.RechargeHitPointsIntervalTicks, 1, 1800);
 
         listing.Gap(Gap);
 
-        DrawIntSliderRow(listing, "BM_DisarmedByEmpForTicks_Temp".Translate(), ref BulwarkonMechanoid.settings.DisarmedByEmpForTicks, 0, 1800);
+        DrawIntSliderRow(listing, "BM_DisarmedByEmpForTicks".Translate(), ref BulwarkonMechanoid.settings.DisarmedByEmpForTicks, 0, 1800);
 
         listing.Gap(Gap);
         listing.GapLine();
 
-        listing.Label("BM_ShieldAmmoLabel_Temp".Translate());
-        if (listing.RadioButton("BM_ShieldAmmoShieldCore_Temp".Translate(),
+        listing.Label("BM_ShieldAmmoLabel".Translate());
+        if (listing.RadioButton("BM_ShieldAmmoShieldCore".Translate(),
             BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.BroadshieldCore))
             BulwarkonMechanoid.settings.ShieldAmmo = ShieldAmmoType.BroadshieldCore;
-        if (listing.RadioButton("BM_ShieldAmmoAdvancedComponent_Temp".Translate(),
+        if (listing.RadioButton("BM_ShieldAmmoAdvancedComponent".Translate(),
             BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.AdvancedComponent))
             BulwarkonMechanoid.settings.ShieldAmmo = ShieldAmmoType.AdvancedComponent;
 
         listing.GapLine();
 
-        listing.Label("BM_SmokeAmmoLabel_Temp".Translate());
-        if (listing.RadioButton("BM_SmokeAmmoUltratech_Temp".Translate(),
+        listing.Label("BM_SmokeAmmoLabel".Translate());
+        if (listing.RadioButton("BM_SmokeAmmoUltratech".Translate(),
             BulwarkonMechanoid.settings.SmokeAmmo == SmokeAmmoType.MedicineUltratech))
             BulwarkonMechanoid.settings.SmokeAmmo = SmokeAmmoType.MedicineUltratech;
-        if (listing.RadioButton("BM_SmokeAmmoRegular_Temp".Translate(),
+        if (listing.RadioButton("BM_SmokeAmmoRegular".Translate(),
             BulwarkonMechanoid.settings.SmokeAmmo == SmokeAmmoType.MedicineIndustrial))
             BulwarkonMechanoid.settings.SmokeAmmo = SmokeAmmoType.MedicineIndustrial;
 
@@ -70,16 +70,16 @@ public class ModSettingDrawer
         Rect resetRect = buttonRowRect.LeftPart(0.30f);
         Rect applyRect = buttonRowRect.RightPart(0.30f);
 
-        if (Widgets.ButtonText(resetRect, "BM_ResetDefaults_Temp".Translate()))
+        if (Widgets.ButtonText(resetRect, "BM_ResetDefaults".Translate()))
         {
             BulwarkonMechanoid.settings.ResetToDefaults();
         }
 
-        if (Widgets.ButtonText(applyRect, "BM_ApplySettings_Temp".Translate()))
+        if (Widgets.ButtonText(applyRect, "BM_ApplySettings".Translate()))
         {
             BulwarkonMechanoid.settings.ApplyToDefs();
             BulwarkonMechanoid.settings.Mod.WriteSettings();
-            Messages.Message("BM_SettingsApplied_Temp".Translate(), MessageTypeDefOf.NeutralEvent, false);
+            Messages.Message("BM_SettingsApplied".Translate(), MessageTypeDefOf.NeutralEvent, false);
         }
 
         listing.End();

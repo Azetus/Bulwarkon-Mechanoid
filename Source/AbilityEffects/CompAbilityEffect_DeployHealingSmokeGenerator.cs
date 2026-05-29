@@ -94,7 +94,7 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
         if (ammo.NullOrEmpty())
         {
             if (showMessages)
-                Messages.Message("BM_NoMedicineAvailable".Translate(), pawn, MessageTypeDefOf.RejectInput, false);
+                Messages.Message("BM_NoAmmoAvailable".Translate(reloadable.AmmoDef.label), pawn, MessageTypeDefOf.RejectInput, false);
             return;
         }
 

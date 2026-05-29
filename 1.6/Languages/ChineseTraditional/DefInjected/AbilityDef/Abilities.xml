@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BM_DeployShieldProjector.label>部署護盾投影儀</BM_DeployShieldProjector.label>
+    <BM_DeployShieldProjector.description>部署一台可攜式護盾投影儀。投影儀生成動量排斥場，可在有限時間內攔截敵方投射物。\n\n擁有3次充能次數。可透過消耗護盾核心裝填恢復（右鍵技能按鈕裝填）。</BM_DeployShieldProjector.description>
+    <BM_DeployHealingSmokeGenerator.label>部署治癒煙霧發生器</BM_DeployHealingSmokeGenerator.label>
+    <BM_DeployHealingSmokeGenerator.description>部署一台治癒煙霧發生器。發生器持續包紮傷口並治療半徑內的所有單位，持續30秒。\n\n擁有3次充能次數。可透過消耗閃耀世界醫藥裝填恢復（右鍵技能按鈕裝填）。</BM_DeployHealingSmokeGenerator.description>
+</LanguageData>

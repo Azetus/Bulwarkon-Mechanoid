@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BM_BulwarkonMechanoid_ModTitle>Bulwarkon Mechanoid</BM_BulwarkonMechanoid_ModTitle>
+    <BM_SettingsHint>Some settings only take effect after clicking Apply Settings.</BM_SettingsHint>
+    <BM_ShieldRadius>Shield radius</BM_ShieldRadius>
+    <BM_ShieldHP>Shield hit points</BM_ShieldHP>
+    <BM_ChargeDurationTicks>Shield recharge time after break</BM_ChargeDurationTicks>
+    <BM_Reload>Reload</BM_Reload>
+    <BM_NoAmmoAvailable>No {0} available for reloading.</BM_NoAmmoAvailable>
+    <BM_ShieldRegenPerInterval>Hit points restored per interval</BM_ShieldRegenPerInterval>
+    <BM_ShieldRechargeIntervalTicks>Hit point recovery interval</BM_ShieldRechargeIntervalTicks>
+    <BM_DisarmedByEmpForTicks>EMP stun duration</BM_DisarmedByEmpForTicks>
+    <BM_ShieldAmmoLabel>Shield projector reload ammo</BM_ShieldAmmoLabel>
+    <BM_ShieldAmmoShieldCore>Shield core</BM_ShieldAmmoShieldCore>
+    <BM_ShieldAmmoAdvancedComponent>Advanced component</BM_ShieldAmmoAdvancedComponent>
+    <BM_SmokeAmmoLabel>Healing smoke generator reload ammo</BM_SmokeAmmoLabel>
+    <BM_SmokeAmmoUltratech>Glitterworld medicine</BM_SmokeAmmoUltratech>
+    <BM_SmokeAmmoRegular>Medicine</BM_SmokeAmmoRegular>
+    <BM_ResetDefaults>Reset to defaults</BM_ResetDefaults>
+    <BM_ApplySettings>Apply settings</BM_ApplySettings>
+    <BM_SettingsApplied>Settings applied.</BM_SettingsApplied>
+</LanguageData>

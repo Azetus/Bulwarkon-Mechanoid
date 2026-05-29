@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BM_DeployShieldProjector.label>部署护盾投影仪</BM_DeployShieldProjector.label>
+    <BM_DeployShieldProjector.description>部署一台便携式护盾投影仪。投影仪生成动量排斥场，可在有限时间内拦截敌方投射物。\n\n拥有3次充能次数。可通过消耗护盾核心装填恢复（右键技能按钮装填）。</BM_DeployShieldProjector.description>
+    <BM_DeployHealingSmokeGenerator.label>部署治愈烟雾发生器</BM_DeployHealingSmokeGenerator.label>
+    <BM_DeployHealingSmokeGenerator.description>部署一台治愈烟雾发生器。发生器持续包扎伤口并治疗半径内的所有单位，持续30秒。\n\n拥有3次充能次数。可通过消耗闪耀世界医药装填恢复（右键技能按钮装填）。</BM_DeployHealingSmokeGenerator.description>
+</LanguageData>

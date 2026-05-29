@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BM_BulwarkonMechanoid_ModTitle>堡垒盾卫</BM_BulwarkonMechanoid_ModTitle>
+    <BM_SettingsHint>部分设置需要点击应用设置后才能生效。</BM_SettingsHint>
+    <BM_ShieldRadius>护盾半径</BM_ShieldRadius>
+    <BM_ShieldHP>护盾盾量</BM_ShieldHP>
+    <BM_ChargeDurationTicks>护盾破碎后充能时间</BM_ChargeDurationTicks>
+    <BM_Reload>装填</BM_Reload>
+    <BM_NoAmmoAvailable>没有可用的{0}进行装填。</BM_NoAmmoAvailable>
+    <BM_ShieldRegenPerInterval>每次间隔恢复的护盾值</BM_ShieldRegenPerInterval>
+    <BM_ShieldRechargeIntervalTicks>护盾恢复间隔</BM_ShieldRechargeIntervalTicks>
+    <BM_DisarmedByEmpForTicks>EMP瘫痪持续时间</BM_DisarmedByEmpForTicks>
+    <BM_ShieldAmmoLabel>护盾投影仪装填弹药</BM_ShieldAmmoLabel>
+    <BM_ShieldAmmoShieldCore>护盾核心</BM_ShieldAmmoShieldCore>
+    <BM_ShieldAmmoAdvancedComponent>高级零部件</BM_ShieldAmmoAdvancedComponent>
+    <BM_SmokeAmmoLabel>治愈烟雾发生器装填弹药</BM_SmokeAmmoLabel>
+    <BM_SmokeAmmoUltratech>闪耀世界医药</BM_SmokeAmmoUltratech>
+    <BM_SmokeAmmoRegular>医药</BM_SmokeAmmoRegular>
+    <BM_ResetDefaults>重置为默认</BM_ResetDefaults>
+    <BM_ApplySettings>应用设置</BM_ApplySettings>
+    <BM_SettingsApplied>设置已应用。</BM_SettingsApplied>
+</LanguageData>

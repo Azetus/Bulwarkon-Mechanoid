@@ -1,6 +1,6 @@
-using Verse;
 using BM_BulwarkonMechanoid.Comps;
 using BM_BulwarkonMechanoid.DefOfs;
+using Verse;
 
 namespace BM_BulwarkonMechanoid.Settings;
 

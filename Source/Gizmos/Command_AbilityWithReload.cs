@@ -14,19 +14,12 @@ public class Command_AbilityWithReload : Command_Ability
     {
         get
         {
-            if (ability.comps == null)
-                yield break;
-
-            foreach (AbilityComp comp in ability.comps)
+            var reloadable = AbilityReloadUtility.FindReloadableComp(ability);
+            if (reloadable != null && reloadable.NeedsReload(allowForceReload: false))
             {
-                if (comp is IAbilityReloadable reloadable
-                    && reloadable.NeedsReload(allowForceReload: false))
-                {
-                    yield return new FloatMenuOption(
-                        "BM_Reload".Translate(),
-                        () => reloadable.StartReloadJob(showMessages: true));
-                    yield break;
-                }
+                yield return new FloatMenuOption(
+                    "BM_Reload".Translate(),
+                    () => reloadable.StartReloadJob(showMessages: true));
             }
         }
     }

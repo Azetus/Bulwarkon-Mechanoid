@@ -1,4 +1,4 @@
-﻿using BM_BulwarkonMechanoid.DefOfs;
+using BM_BulwarkonMechanoid.DefOfs;
 using RimWorld;
 using RimWorld.Utility;
 using Verse;
@@ -29,7 +29,7 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
         parent.maxCharges - parent.RemainingCharges;
 
     public int MaxAmmoAmount() =>
-        parent.maxCharges - parent.RemainingCharges;
+        parent.maxCharges;
 
     public bool CanBeUsed(out string reason)
     {
@@ -42,9 +42,14 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
     public void ReloadFrom(Thing ammo)
     {
         if (ammo == null || ammo.Destroyed) return;
-        if (parent is not { UsesCharges: true } || parent.RemainingCharges >= parent.maxCharges) return;
-        ammo.SplitOff(1).Destroy(DestroyMode.Vanish);
-        parent.RemainingCharges = System.Math.Min(parent.RemainingCharges + 1, parent.maxCharges);
+        if (parent is not { UsesCharges: true } || parent.RemainingCharges >= parent.maxCharges)
+            return;
+
+        int missing = parent.maxCharges - parent.RemainingCharges;
+        int toConsume = System.Math.Min(missing, ammo.stackCount);
+        if (toConsume <= 0) return;
+        ammo.SplitOff(toConsume).Destroy(DestroyMode.Vanish);
+        parent.RemainingCharges += toConsume;
     }
 
     #endregion
@@ -86,24 +91,8 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
             return;
         }
 
-        Job job = JobMaker.MakeJob(BM_BulwarkonDefOfs.BM_ReloadHealingSmokeGenerator, reloadable.ReloadableThing);
-        job.targetQueueB = ammo.Select(t => new LocalTargetInfo(t)).ToList();
-        job.count = System.Math.Min(ammo.Sum(t => t.stackCount), reloadable.MaxAmmoNeeded(allowForcedReload: true));
+        Job job = JobGiver_Reload.MakeReloadJob(reloadable, ammo);
+        job.def = ((IAbilityReloadable)reloadable).ReloadJobDef;
         pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
-    }
-
-    // TODO 改成用DefOf找
-    public static CompAbilityEffect_DeployHealingSmokeGenerator? FindOnPawn(Pawn pawn)
-    {
-        if (pawn?.abilities == null) return null;
-        foreach (Ability ab in pawn.abilities.abilities)
-        {
-            if (ab.comps != null)
-                foreach (AbilityComp comp in ab.comps)
-                    if (comp is CompAbilityEffect_DeployHealingSmokeGenerator effect)
-                        return effect;
-        }
-
-        return null;
     }
 }

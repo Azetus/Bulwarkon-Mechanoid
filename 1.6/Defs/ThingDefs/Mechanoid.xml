@@ -68,7 +68,7 @@
             <li Class="BM_BulwarkonMechanoid.Comps.CompProperties_BulwarkonShieldInterceptor">
                 <interceptGroundProjectiles>true</interceptGroundProjectiles>
                 <interceptAirProjectiles>true</interceptAirProjectiles>
-                <color>(0.4, 0.4, 0.4)</color>
+                <color>(0.3, 0.6, 1.0)</color>
                 <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
                 <activeSound>BulletShield_Ambience</activeSound>
                 <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>

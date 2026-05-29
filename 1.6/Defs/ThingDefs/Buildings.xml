@@ -101,7 +101,7 @@
                 <range>5</range>
                 <hediff>BM_HealingSmokeHediff</hediff>
                 <checkInterval>60</checkInterval>
-                <drawLines>false</drawLines>
+                <drawLines>true</drawLines>
             </li>
             <li Class="RimWorld.CompProperties_Effecter">
                 <effecterDef>BM_HealingSmoke_Sustained</effecterDef>

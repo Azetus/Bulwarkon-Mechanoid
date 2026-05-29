@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-    <BM_HealingSmoke.label>healing smoke</BM_HealingSmoke.label>
-    <BM_HealingSmoke.description>Healing smoke tends wounds and slowly mends injuries.</BM_HealingSmoke.description>
+    <BM_HealingSmokeHediff.label>healing smoke</BM_HealingSmokeHediff.label>
+    <BM_HealingSmokeHediff.description>Healing smoke tends wounds and slowly mends injuries.</BM_HealingSmokeHediff.description>
 </LanguageData>

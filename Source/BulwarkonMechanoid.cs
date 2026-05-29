@@ -7,7 +7,7 @@ namespace BM_BulwarkonMechanoid;
 
 public class BulwarkonMechanoid : Mod
 {
-    public static BulwarkonMechanoidModSettings settings;
+    public static BulwarkonMechanoidModSettings settings = null!;
 
     public BulwarkonMechanoid(ModContentPack content) : base(content)
     {

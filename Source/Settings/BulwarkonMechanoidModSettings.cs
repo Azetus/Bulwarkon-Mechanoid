@@ -8,20 +8,24 @@ public class BulwarkonMechanoidModSettings : ModSettings
 {
     public float ShieldRadius = 3;
     public int ShieldHitPoints = 2000;
-    public int chargeDurationTicks = 3600;
+    public int chargeDurationTicks = 1800;
     public int ShieldHitPointsPerInterval = 1;
     public int RechargeHitPointsIntervalTicks = 120;
     public int DisarmedByEmpForTicks = 0;
+    public ShieldAmmoType ShieldAmmo = ShieldAmmoType.BroadshieldCore;
+    public SmokeAmmoType SmokeAmmo = SmokeAmmoType.MedicineUltratech;
 
     public override void ExposeData()
     {
         base.ExposeData();
         Scribe_Values.Look(ref ShieldRadius, nameof(ShieldRadius), 3);
         Scribe_Values.Look(ref ShieldHitPoints, nameof(ShieldHitPoints), 2000);
-        Scribe_Values.Look(ref chargeDurationTicks, nameof(chargeDurationTicks), 3600);
+        Scribe_Values.Look(ref chargeDurationTicks, nameof(chargeDurationTicks), 1800);
         Scribe_Values.Look(ref ShieldHitPointsPerInterval, nameof(ShieldHitPointsPerInterval), 1);
         Scribe_Values.Look(ref RechargeHitPointsIntervalTicks, nameof(RechargeHitPointsIntervalTicks), 120);
         Scribe_Values.Look(ref DisarmedByEmpForTicks, nameof(DisarmedByEmpForTicks), 0);
+        Scribe_Values.Look(ref ShieldAmmo, nameof(ShieldAmmo), ShieldAmmoType.BroadshieldCore);
+        Scribe_Values.Look(ref SmokeAmmo, nameof(SmokeAmmo), SmokeAmmoType.MedicineUltratech);
     }
 
     public void ApplyToDefs()
@@ -41,9 +45,11 @@ public class BulwarkonMechanoidModSettings : ModSettings
     {
         ShieldRadius = 3;
         ShieldHitPoints = 2000;
-        chargeDurationTicks = 3600;
+        chargeDurationTicks = 1800;
         ShieldHitPointsPerInterval = 1;
         RechargeHitPointsIntervalTicks = 120;
         DisarmedByEmpForTicks = 0;
+        ShieldAmmo = ShieldAmmoType.BroadshieldCore;
+        SmokeAmmo = SmokeAmmoType.MedicineUltratech;
     }
 }

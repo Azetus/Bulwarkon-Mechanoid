@@ -44,6 +44,27 @@ public class ModSettingDrawer
         DrawIntSliderRow(listing, "BM_DisarmedByEmpForTicks_Temp".Translate(), ref BulwarkonMechanoid.settings.DisarmedByEmpForTicks, 0, 1800);
 
         listing.Gap(Gap);
+        listing.GapLine();
+
+        listing.Label("BM_ShieldAmmoLabel_Temp".Translate());
+        if (listing.RadioButton("BM_ShieldAmmoShieldCore_Temp".Translate(),
+            BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.BroadshieldCore))
+            BulwarkonMechanoid.settings.ShieldAmmo = ShieldAmmoType.BroadshieldCore;
+        if (listing.RadioButton("BM_ShieldAmmoAdvancedComponent_Temp".Translate(),
+            BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.AdvancedComponent))
+            BulwarkonMechanoid.settings.ShieldAmmo = ShieldAmmoType.AdvancedComponent;
+
+        listing.GapLine();
+
+        listing.Label("BM_SmokeAmmoLabel_Temp".Translate());
+        if (listing.RadioButton("BM_SmokeAmmoUltratech_Temp".Translate(),
+            BulwarkonMechanoid.settings.SmokeAmmo == SmokeAmmoType.MedicineUltratech))
+            BulwarkonMechanoid.settings.SmokeAmmo = SmokeAmmoType.MedicineUltratech;
+        if (listing.RadioButton("BM_SmokeAmmoRegular_Temp".Translate(),
+            BulwarkonMechanoid.settings.SmokeAmmo == SmokeAmmoType.MedicineIndustrial))
+            BulwarkonMechanoid.settings.SmokeAmmo = SmokeAmmoType.MedicineIndustrial;
+
+        listing.Gap(Gap);
 
         Rect buttonRowRect = listing.GetRect(ButtonHeight);
         Rect resetRect = buttonRowRect.LeftPart(0.30f);

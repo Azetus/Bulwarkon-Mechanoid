@@ -1,4 +1,5 @@
 using BM_BulwarkonMechanoid.DefOfs;
+using BM_BulwarkonMechanoid.Settings;
 using RimWorld;
 using RimWorld.Utility;
 using Verse;
@@ -15,7 +16,13 @@ public class CompAbilityEffect_DeployBulwarkonShieldProjector : CompAbilityEffec
     #region IReloadableComp
 
     public Thing ReloadableThing => parent.pawn;
-    public ThingDef AmmoDef => ThingDef.Named("BroadshieldCore");
+
+    public ThingDef AmmoDef => BulwarkonMechanoid.settings.ShieldAmmo switch
+    {
+        ShieldAmmoType.BroadshieldCore => ThingDef.Named("BroadshieldCore"),
+        _ => ThingDefOf.ComponentSpacer
+    };
+
     public int BaseReloadTicks => Props.baseReloadTicks;
     public int MaxCharges => parent.maxCharges;
     int ICompWithCharges.RemainingCharges => parent.RemainingCharges;

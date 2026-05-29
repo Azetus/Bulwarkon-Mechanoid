@@ -1,4 +1,5 @@
 using BM_BulwarkonMechanoid.DefOfs;
+using BM_BulwarkonMechanoid.Settings;
 using RimWorld;
 using RimWorld.Utility;
 using Verse;
@@ -14,7 +15,13 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
     #region IReloadableComp
 
     public Thing ReloadableThing => parent.pawn;
-    public ThingDef AmmoDef => ThingDefOf.MedicineUltratech;
+
+    public ThingDef AmmoDef => BulwarkonMechanoid.settings.SmokeAmmo switch
+    {
+        SmokeAmmoType.MedicineUltratech => ThingDefOf.MedicineUltratech,
+        _ => ThingDefOf.MedicineIndustrial
+    };
+
     public int BaseReloadTicks => Props.baseReloadTicks;
     public int MaxCharges => parent.maxCharges;
     int ICompWithCharges.RemainingCharges => parent.RemainingCharges;

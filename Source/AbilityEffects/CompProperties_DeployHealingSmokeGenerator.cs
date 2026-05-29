@@ -9,6 +9,7 @@ public class CompProperties_DeployHealingSmokeGenerator: CompProperties_AbilityE
     public int baseReloadTicks = 60;
     public EffecterDef? deployEffect;
     public SoundDef? deploySound;
+    public SoundDef? soundReload;
 
     public CompProperties_DeployHealingSmokeGenerator()
     {

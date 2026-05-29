@@ -58,6 +58,10 @@ public class CompAbilityEffect_DeployBulwarkonShieldProjector : CompAbilityEffec
         if (toConsume <= 0) return;
         ammo.SplitOff(toConsume).Destroy(DestroyMode.Vanish);
         parent.RemainingCharges += toConsume;
+        if (Props.soundReload != null && ReloadableThing?.Map != null)
+        {
+            Props.soundReload.PlayOneShot(new TargetInfo(ReloadableThing.Position, ReloadableThing.Map));
+        }
     }
 
     #endregion

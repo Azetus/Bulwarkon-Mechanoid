@@ -1,3 +1,4 @@
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -5,8 +6,9 @@ namespace BM_BulwarkonMechanoid.Settings.ModSettingUI;
 
 public class ModSettingDrawer
 {
-     private const float SliderHeight = 28f;
+    private const float SliderHeight = 28f;
     private const float Gap = 8f;
+    private const float ButtonHeight = 36f;
 
     public static void Draw(Rect inRect)
     {
@@ -27,7 +29,7 @@ public class ModSettingDrawer
 
         listing.Gap(Gap);
         
-        DrawIntSliderRow(listing, "BM_RechargeTicks".Translate(), ref BulwarkonMechanoid.settings.chargeDurationTicks, 0, 18000);
+        DrawIntSliderRow(listing, "BM_ChargeDurationTicks".Translate(), ref BulwarkonMechanoid.settings.chargeDurationTicks, 0, 18000);
 
         listing.Gap(Gap);
 
@@ -35,11 +37,29 @@ public class ModSettingDrawer
 
         listing.Gap(Gap);
 
-        DrawIntSliderRow(listing, "BM_ShieldRechargeIntervalTicks_Temp".Translate(), ref BulwarkonMechanoid.settings.ShieldRechargeIntervalTicks, 60, 1800);
+        DrawIntSliderRow(listing, "BM_ShieldRechargeIntervalTicks_Temp".Translate(), ref BulwarkonMechanoid.settings.RechargeHitPointsIntervalTicks, 1, 1800);
 
         listing.Gap(Gap);
 
         DrawIntSliderRow(listing, "BM_DisarmedByEmpForTicks_Temp".Translate(), ref BulwarkonMechanoid.settings.DisarmedByEmpForTicks, 0, 1800);
+
+        listing.Gap(Gap);
+
+        Rect buttonRowRect = listing.GetRect(ButtonHeight);
+        Rect resetRect = buttonRowRect.LeftPart(0.30f);
+        Rect applyRect = buttonRowRect.RightPart(0.30f);
+
+        if (Widgets.ButtonText(resetRect, "BM_ResetDefaults_Temp".Translate()))
+        {
+            BulwarkonMechanoid.settings.ResetToDefaults();
+        }
+
+        if (Widgets.ButtonText(applyRect, "BM_ApplySettings_Temp".Translate()))
+        {
+            BulwarkonMechanoid.settings.ApplyToDefs();
+            BulwarkonMechanoid.settings.Mod.WriteSettings();
+            Messages.Message("BM_SettingsApplied_Temp".Translate(), MessageTypeDefOf.NeutralEvent, false);
+        }
 
         listing.End();
     }

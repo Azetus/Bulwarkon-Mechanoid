@@ -10,7 +10,7 @@ public class CompProperties_BulwarkonShieldInterceptor : CompProperties_Projecti
         radius = BulwarkonMechanoid.settings.ShieldRadius;
         hitPoints = BulwarkonMechanoid.settings.ShieldHitPoints;
         chargeDurationTicks = BulwarkonMechanoid.settings.chargeDurationTicks;
-        rechargeHitPointsIntervalTicks = BulwarkonMechanoid.settings.ShieldRechargeIntervalTicks;
+        rechargeHitPointsIntervalTicks = BulwarkonMechanoid.settings.RechargeHitPointsIntervalTicks;
         disarmedByEmpForTicks = BulwarkonMechanoid.settings.DisarmedByEmpForTicks;
     }
 }

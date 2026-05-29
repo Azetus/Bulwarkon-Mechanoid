@@ -53,7 +53,7 @@ public class CompAbilityEffect_DeployBulwarkonShieldProjector : CompAbilityEffec
     #endregion
 
 
-    public JobDef ReloadJobDef => BM_BulwawrkonDefOfs.BM_ReloadShieldProjector;
+    public JobDef ReloadJobDef => BM_BulwarkonDefOfs.BM_ReloadShieldProjector;
 
     public void StartReloadJob(bool showMessages) =>
         TryStartReloadJob(this, showMessages);
@@ -95,7 +95,7 @@ public class CompAbilityEffect_DeployBulwarkonShieldProjector : CompAbilityEffec
         }
 
         Job job = JobMaker.MakeJob(
-            BM_BulwawrkonDefOfs.BM_ReloadShieldProjector, reloadable.ReloadableThing);
+            BM_BulwarkonDefOfs.BM_ReloadShieldProjector, reloadable.ReloadableThing);
         job.targetQueueB = ammo.Select(t => new LocalTargetInfo(t)).ToList();
         job.count = System.Math.Min(ammo.Sum(t => t.stackCount),
             reloadable.MaxAmmoNeeded(allowForcedReload: true));

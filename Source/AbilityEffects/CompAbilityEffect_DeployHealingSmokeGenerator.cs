@@ -49,7 +49,7 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
 
     #endregion
 
-    public JobDef ReloadJobDef => BM_BulwawrkonDefOfs.BM_ReloadHealingSmokeGenerator;
+    public JobDef ReloadJobDef => BM_BulwarkonDefOfs.BM_ReloadHealingSmokeGenerator;
 
     public void StartReloadJob(bool showMessages) =>
         TryStartReloadJob(this, showMessages);
@@ -86,7 +86,7 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
             return;
         }
 
-        Job job = JobMaker.MakeJob(BM_BulwawrkonDefOfs.BM_ReloadHealingSmokeGenerator, reloadable.ReloadableThing);
+        Job job = JobMaker.MakeJob(BM_BulwarkonDefOfs.BM_ReloadHealingSmokeGenerator, reloadable.ReloadableThing);
         job.targetQueueB = ammo.Select(t => new LocalTargetInfo(t)).ToList();
         job.count = System.Math.Min(ammo.Sum(t => t.stackCount), reloadable.MaxAmmoNeeded(allowForcedReload: true));
         pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);

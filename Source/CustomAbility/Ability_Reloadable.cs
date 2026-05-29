@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 
 namespace BM_BulwarkonMechanoid.CustomAbility;
@@ -6,6 +6,14 @@ namespace BM_BulwarkonMechanoid.CustomAbility;
 public class Ability_Reloadable : Ability
 {
     public Ability_Reloadable()
+    {
+    }
+
+    public Ability_Reloadable(Pawn pawn) : base(pawn)
+    {
+    }
+
+    public Ability_Reloadable(Pawn pawn, Precept sourcePrecept) : base(pawn, sourcePrecept)
     {
     }
 

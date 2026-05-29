@@ -1,4 +1,4 @@
-﻿using BM_BulwarkonMechanoid.Settings;
+using BM_BulwarkonMechanoid.Settings;
 using BM_BulwarkonMechanoid.Settings.ModSettingUI;
 using UnityEngine;
 using Verse;

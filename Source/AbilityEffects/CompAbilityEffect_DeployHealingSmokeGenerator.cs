@@ -33,7 +33,7 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
 
     public bool CanBeUsed(out string reason)
     {
-        reason = null;
+        reason = null!;
         return true;
     }
 
@@ -81,7 +81,7 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
 
     public static void TryStartReloadJob(IReloadableComp reloadable, bool showMessages)
     {
-        Pawn pawn = reloadable.ReloadableThing as Pawn;
+        Pawn? pawn = reloadable.ReloadableThing as Pawn;
         if (pawn?.Map == null) return;
         List<Thing> ammo = ReloadableUtility.FindEnoughAmmo(pawn, pawn.Position, reloadable, forceReload: false);
         if (ammo.NullOrEmpty())

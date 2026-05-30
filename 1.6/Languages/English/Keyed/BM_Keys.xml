@@ -16,6 +16,8 @@
     <BM_SmokeAmmoLabel>Healing smoke generator reload ammo</BM_SmokeAmmoLabel>
     <BM_SmokeAmmoUltratech>Glitterworld medicine</BM_SmokeAmmoUltratech>
     <BM_SmokeAmmoRegular>Medicine</BM_SmokeAmmoRegular>
+    <BM_SmokeHealInterval>Smoke heal interval</BM_SmokeHealInterval>
+    <BM_SmokeHealAmount>Smoke heal amount per interval</BM_SmokeHealAmount>
     <BM_ResetDefaults>Reset to defaults</BM_ResetDefaults>
     <BM_ApplySettings>Apply settings</BM_ApplySettings>
     <BM_SettingsApplied>Settings applied.</BM_SettingsApplied>

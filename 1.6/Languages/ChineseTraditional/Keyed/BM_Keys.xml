@@ -16,6 +16,8 @@
     <BM_SmokeAmmoLabel>治癒煙霧發生器裝填彈藥</BM_SmokeAmmoLabel>
     <BM_SmokeAmmoUltratech>閃耀世界醫藥</BM_SmokeAmmoUltratech>
     <BM_SmokeAmmoRegular>醫藥</BM_SmokeAmmoRegular>
+    <BM_SmokeHealInterval>煙霧治療間隔</BM_SmokeHealInterval>
+    <BM_SmokeHealAmount>每次治療恢復量</BM_SmokeHealAmount>
     <BM_ResetDefaults>重設為預設</BM_ResetDefaults>
     <BM_ApplySettings>套用設定</BM_ApplySettings>
     <BM_SettingsApplied>設定已套用。</BM_SettingsApplied>

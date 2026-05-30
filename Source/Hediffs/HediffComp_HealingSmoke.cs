@@ -1,30 +1,37 @@
-﻿using Verse;
+using System.Linq;
+using Verse;
 
 namespace BM_BulwarkonMechanoid.Hediffs;
 
-public class HediffComp_HealingSmoke: HediffComp
+public class HediffComp_HealingSmoke : HediffComp
 {
     public HediffCompProperties_HealingSmoke Props =>
         (HediffCompProperties_HealingSmoke)props;
 
-    private bool hasTended;
-
     public override void CompPostTick(ref float severityAdjustment)
     {
-        if (hasTended) return;
+        if (!Pawn.IsHashIntervalTick(BulwarkonMechanoid.settings.SmokeHealIntervalTicks))
+            return;
 
-        hasTended = true;
-        List<Hediff> injuries = Pawn.health.hediffSet.hediffs;
-        for (int i = 0; i < injuries.Count; i++)
-        {
-            if (injuries[i] is Hediff_Injury injury && injury.BleedRate > 0f)
-                injury.Tended(Props.tendQuality, Props.tendMaxQuality, 0);
-        }
+        TendOneInjury();
+        HealOneInjury();
     }
 
-    public override void CompExposeData()
+    private void TendOneInjury()
     {
-        Scribe_Values.Look(ref hasTended, "hasTended");
+        var injury = Pawn.health.hediffSet.hediffs
+            .Find(h => h.TendableNow()) as Hediff_Injury;
+        if (injury != null)
+            injury.Tended(Props.tendQuality, Props.tendMaxQuality, 0);
+    }
+
+    private void HealOneInjury()
+    {
+        var injury = Pawn.health.hediffSet.hediffs
+            .OfType<Hediff_Injury>()
+            .FirstOrDefault(h => !h.IsPermanent());
+        if (injury != null)
+            injury.Heal(BulwarkonMechanoid.settings.SmokeHealAmount);
     }
 }
 

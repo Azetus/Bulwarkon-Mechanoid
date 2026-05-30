@@ -46,6 +46,15 @@ public class ModSettingDrawer
         listing.Gap(Gap);
         listing.GapLine();
 
+        DrawIntSliderRow(listing, "BM_SmokeHealInterval".Translate(), ref BulwarkonMechanoid.settings.SmokeHealIntervalTicks, 60, 6000);
+
+        listing.Gap(Gap);
+
+        DrawIntSliderRow(listing, "BM_SmokeHealAmount".Translate(), ref BulwarkonMechanoid.settings.SmokeHealAmount, 1, 20);
+
+        listing.Gap(Gap);
+        listing.GapLine();
+
         listing.Label("BM_ShieldAmmoLabel".Translate());
         if (listing.RadioButton("BM_ShieldAmmoShieldCore".Translate(),
             BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.BroadshieldCore))

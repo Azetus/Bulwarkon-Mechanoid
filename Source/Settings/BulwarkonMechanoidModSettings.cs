@@ -14,6 +14,8 @@ public class BulwarkonMechanoidModSettings : ModSettings
     public int DisarmedByEmpForTicks = 0;
     public ShieldAmmoType ShieldAmmo = ShieldAmmoType.BroadshieldCore;
     public SmokeAmmoType SmokeAmmo = SmokeAmmoType.MedicineUltratech;
+    public int SmokeHealIntervalTicks = 60;
+    public int SmokeHealAmount = 1;
 
     public override void ExposeData()
     {
@@ -26,6 +28,8 @@ public class BulwarkonMechanoidModSettings : ModSettings
         Scribe_Values.Look(ref DisarmedByEmpForTicks, nameof(DisarmedByEmpForTicks), 0);
         Scribe_Values.Look(ref ShieldAmmo, nameof(ShieldAmmo), ShieldAmmoType.BroadshieldCore);
         Scribe_Values.Look(ref SmokeAmmo, nameof(SmokeAmmo), SmokeAmmoType.MedicineUltratech);
+        Scribe_Values.Look(ref SmokeHealIntervalTicks, nameof(SmokeHealIntervalTicks), 60);
+        Scribe_Values.Look(ref SmokeHealAmount, nameof(SmokeHealAmount), 1);
     }
 
     public void ApplyToDefs()
@@ -51,5 +55,7 @@ public class BulwarkonMechanoidModSettings : ModSettings
         DisarmedByEmpForTicks = 0;
         ShieldAmmo = ShieldAmmoType.BroadshieldCore;
         SmokeAmmo = SmokeAmmoType.MedicineUltratech;
+        SmokeHealIntervalTicks = 60;
+        SmokeHealAmount = 1;
     }
 }

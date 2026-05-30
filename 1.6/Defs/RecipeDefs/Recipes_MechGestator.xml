@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <RecipeDef ParentName="MediumMechanoidRecipe">
+        <defName>Make_Mech_Bulwarkon</defName>
+        <label>gestate bulwarkon</label>
+        <description>Gestate a bulwarkon mechanoid equipped with a full-angle shield projector and support abilities.</description>
+        <gestationCycles>5</gestationCycles>
+        <recipeUsers>
+            <li>LargeMechGestator</li>
+        </recipeUsers>
+        <researchPrerequisite>UltraMechtech</researchPrerequisite>
+        <ingredients Inherit="False">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentSpacer</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SubcoreHigh</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>NanostructuringChip</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>BroadshieldCore</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineUltratech</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <products>
+            <Mech_Bulwarkon>1</Mech_Bulwarkon>
+        </products>
+        <descriptionHyperlinks>
+            <ThingDef>Mech_Bulwarkon</ThingDef>
+        </descriptionHyperlinks>
+    </RecipeDef>
+</Defs>

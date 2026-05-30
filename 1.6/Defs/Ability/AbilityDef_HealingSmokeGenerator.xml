@@ -12,7 +12,7 @@
         <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>1</warmupTime>
+            <warmupTime>0</warmupTime>
             <requireLineOfSight>false</requireLineOfSight>
             <drawAimPie>false</drawAimPie>
             <range>3.9</range>

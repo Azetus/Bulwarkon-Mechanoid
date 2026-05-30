@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <PawnKindDef ParentName="BaseMechanoidKind">
         <defName>Mech_Bulwarkon</defName>
@@ -25,10 +25,6 @@
                 </bodyGraphicData>
             </li>
         </lifeStages>
-        <weaponMoney>9999~9999</weaponMoney>
-        <weaponTags>
-            <li>MechanoidGunNeedleLauncher</li>
-        </weaponTags>
         <techHediffsChance>1</techHediffsChance>
         <techHediffsMoney>9999~9999</techHediffsMoney>
         <controlGroupPortraitZoom>1.2</controlGroupPortraitZoom>

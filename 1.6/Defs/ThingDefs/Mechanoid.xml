@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="BaseMechanoidWalker">
         <defName>Mech_Bulwarkon</defName>
@@ -7,10 +7,11 @@
         <statBases>
             <MarketValue>1200</MarketValue>
             <MoveSpeed>5</MoveSpeed>
-            <EnergyShieldRechargeRate>0.25</EnergyShieldRechargeRate>
-            <EnergyShieldEnergyMax>1.5</EnergyShieldEnergyMax>
             <BandwidthCost MayRequire="Ludeon.RimWorld.Biotech">2</BandwidthCost>
             <ControlTakingTime>18</ControlTakingTime>
+            <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+            <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+            <WorkSpeedGlobal>1.0</WorkSpeedGlobal>
         </statBases>
         <tools>
             <li>
@@ -19,7 +20,7 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>12.0</power>
+                <power>5</power>
                 <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
@@ -30,7 +31,7 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>12.0</power>
+                <power>5</power>
                 <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
                 <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
@@ -40,7 +41,7 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>8.5</power>
+                <power>2</power>
                 <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -50,7 +51,11 @@
         <race>
             <thinkTreeMain>BulWarkonMechanoid_ThinkTree</thinkTreeMain>
             <body>BulwarkonMechanoid_Body</body>
-            <baseHealthScale>0.72</baseHealthScale>
+            <baseHealthScale>1.0</baseHealthScale>
+            <mechFixedSkillLevel>15</mechFixedSkillLevel>
+            <mechEnabledWorkTypes>
+                <li>Doctor</li>
+            </mechEnabledWorkTypes>
             <detritusLeavings>
                 <li>
                     <def>ChunkMechanoidSlag</def>
@@ -77,5 +82,4 @@
             </li>
         </comps>
     </ThingDef>
-
 </Defs>

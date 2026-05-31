@@ -11,6 +11,7 @@
             <ControlTakingTime>18</ControlTakingTime>
             <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
             <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+            <ArmorRating_Heat>2.00</ArmorRating_Heat>
             <WorkSpeedGlobal>1.0</WorkSpeedGlobal>
         </statBases>
         <tools>

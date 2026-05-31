@@ -20,6 +20,7 @@
         <li>Ludeon.RimWorld</li>
         <li>Ludeon.RimWorld.Biotech</li>
         <li>Ludeon.RimWorld.Royalty</li>
+        <li>CETeam.CombatExtended</li>
     </loadAfter>
     <description>
         Bulwarkon Mechanoid

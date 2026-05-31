@@ -4,19 +4,19 @@
     <BM_SettingsHint>部分設定需要點擊套用設定後才能生效。</BM_SettingsHint>
     <BM_ShieldRadius>護盾半徑</BM_ShieldRadius>
     <BM_ShieldHP>護盾盾量</BM_ShieldHP>
-    <BM_ChargeDurationTicks>護盾破碎後充能時間</BM_ChargeDurationTicks>
+    <BM_ChargeDurationTicks>護盾破碎後充能時間（ticks）</BM_ChargeDurationTicks>
     <BM_Reload>裝填</BM_Reload>
     <BM_NoAmmoAvailable>沒有可用的{0}進行裝填。</BM_NoAmmoAvailable>
     <BM_ShieldRegenPerInterval>每次間隔恢復的護盾值</BM_ShieldRegenPerInterval>
-    <BM_ShieldRechargeIntervalTicks>護盾恢復間隔</BM_ShieldRechargeIntervalTicks>
-    <BM_DisarmedByEmpForTicks>EMP癱瘓持續時間</BM_DisarmedByEmpForTicks>
+    <BM_ShieldRechargeIntervalTicks>護盾恢復間隔（ticks）</BM_ShieldRechargeIntervalTicks>
+    <BM_DisarmedByEmpForTicks>EMP癱瘓持續時間（ticks）</BM_DisarmedByEmpForTicks>
     <BM_ShieldAmmoLabel>護盾投影儀裝填彈藥</BM_ShieldAmmoLabel>
     <BM_ShieldAmmoShieldCore>護盾核心</BM_ShieldAmmoShieldCore>
     <BM_ShieldAmmoAdvancedComponent>高級零部件</BM_ShieldAmmoAdvancedComponent>
     <BM_SmokeAmmoLabel>治癒煙霧發生器裝填彈藥</BM_SmokeAmmoLabel>
     <BM_SmokeAmmoUltratech>閃耀世界醫藥</BM_SmokeAmmoUltratech>
     <BM_SmokeAmmoRegular>醫藥</BM_SmokeAmmoRegular>
-    <BM_SmokeHealInterval>煙霧治療間隔</BM_SmokeHealInterval>
+    <BM_SmokeHealInterval>煙霧治療間隔（ticks）</BM_SmokeHealInterval>
     <BM_SmokeHealAmount>每次治療恢復量</BM_SmokeHealAmount>
     <BM_ResetDefaults>重設為預設</BM_ResetDefaults>
     <BM_ApplySettings>套用設定</BM_ApplySettings>

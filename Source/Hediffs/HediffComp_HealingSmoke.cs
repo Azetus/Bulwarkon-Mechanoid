@@ -1,4 +1,4 @@
-using System.Linq;
+using RimWorld;
 using Verse;
 
 namespace BM_BulwarkonMechanoid.Hediffs;
@@ -15,6 +15,16 @@ public class HediffComp_HealingSmoke : HediffComp
 
         TendOneInjury();
         HealOneInjury();
+        ExtinguishFire();
+    }
+
+    private void ExtinguishFire()
+    {
+        if (Pawn.IsBurning())
+        {
+            if (Pawn.GetAttachment(ThingDefOf.Fire) is Fire { Destroyed: false } fire)
+                fire.Destroy();
+        }
     }
 
     private void TendOneInjury()

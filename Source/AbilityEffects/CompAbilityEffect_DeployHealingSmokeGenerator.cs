@@ -79,6 +79,14 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
         IntVec3 pos = parent.pawn.Position;
         GenSpawn.Spawn(Props.smokeGeneratorDef, pos, map);
 
+        GenExplosion.DoExplosion(pos, map, 5f,
+            BM_BulwarkonDefOfs.BM_ExtinguishSilent, null, -1, -1f,
+            null, null, null, null,
+            BM_BulwarkonDefOfs.BM_Filth_SmokeResidue, 1f, 1,
+            null, null, 255, true,
+            null, 0f, 1, 0f, false, null, null, null,
+            false, 1f, 0f, false);
+
         if (Props.deployEffect != null)
         {
             Effecter effect = Props.deployEffect.Spawn();

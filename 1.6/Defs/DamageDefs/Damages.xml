@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <DamageDef>
+        <defName>BM_ExtinguishSilent</defName>
+        <workerClass>DamageWorker_Extinguish</workerClass>
+        <defaultDamage>999999</defaultDamage>
+        <harmsHealth>false</harmsHealth>
+        <hediff>BM_HealingSmokeHediff</hediff>
+    </DamageDef>
+</Defs>

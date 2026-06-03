@@ -15,7 +15,7 @@
             <warmupTime>0</warmupTime>
             <requireLineOfSight>false</requireLineOfSight>
             <drawAimPie>false</drawAimPie>
-            <range>3.9</range>
+            <range>5</range>
             <targetParams>
                 <canTargetSelf>true</canTargetSelf>
             </targetParams>

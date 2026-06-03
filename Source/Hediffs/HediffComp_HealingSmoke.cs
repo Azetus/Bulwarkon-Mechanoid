@@ -1,4 +1,3 @@
-using RimWorld;
 using Verse;
 
 namespace BM_BulwarkonMechanoid.Hediffs;
@@ -10,22 +9,13 @@ public class HediffComp_HealingSmoke : HediffComp
 
     public override void CompPostTick(ref float severityAdjustment)
     {
-        if (!Pawn.IsHashIntervalTick(BulwarkonMechanoid.settings.SmokeHealIntervalTicks))
-            return;
-
-        TendOneInjury();
-        HealOneInjury();
-        ExtinguishFire();
-    }
-
-    private void ExtinguishFire()
-    {
-        if (Pawn.IsBurning())
+        if (Pawn.IsHashIntervalTick(BulwarkonMechanoid.settings.SmokeHealIntervalTicks))
         {
-            if (Pawn.GetAttachment(ThingDefOf.Fire) is Fire { Destroyed: false } fire)
-                fire.Destroy();
+            TendOneInjury();
+            HealOneInjury();
         }
     }
+
 
     private void TendOneInjury()
     {

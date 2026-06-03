@@ -113,4 +113,16 @@ public class CompAbilityEffect_DeployBulwarkonShieldProjector : CompAbilityEffec
 
         pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
     }
+
+    public override IEnumerable<Gizmo> CompGetGizmosExtra()
+    {
+        if (Prefs.DevMode && DebugSettings.godMode)
+        {
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: Refill shield",
+                action = () => parent.RemainingCharges = parent.maxCharges
+            };
+        }
+    }
 }

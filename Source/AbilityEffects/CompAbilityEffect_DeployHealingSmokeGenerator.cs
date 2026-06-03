@@ -106,4 +106,16 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
         job.def = ((IAbilityReloadable)reloadable).ReloadJobDef;
         pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
     }
+
+    public override IEnumerable<Gizmo> CompGetGizmosExtra()
+    {
+        if (Prefs.DevMode && DebugSettings.godMode)
+        {
+            yield return new Command_Action
+            {
+                defaultLabel = "DEV: Refill smoke",
+                action = () => parent.RemainingCharges = parent.maxCharges
+            };
+        }
+    }
 }

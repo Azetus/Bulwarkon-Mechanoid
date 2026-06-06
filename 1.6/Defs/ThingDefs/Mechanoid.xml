@@ -50,7 +50,7 @@
             </li>
         </tools>
         <race>
-            <thinkTreeMain>BulWarkonMechanoid_ThinkTree</thinkTreeMain>
+            <thinkTreeMain>BulwarkonMechanoid_ThinkTree</thinkTreeMain>
             <body>BulwarkonMechanoid_Body</body>
             <baseHealthScale>1.0</baseHealthScale>
             <mechFixedSkillLevel>15</mechFixedSkillLevel>

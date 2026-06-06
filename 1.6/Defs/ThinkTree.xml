@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ThinkTreeDef>
-        <defName>BulWarkonMechanoid_ThinkTree</defName>
+        <defName>BulwarkonMechanoid_ThinkTree</defName>
         <thinkRoot Class="ThinkNode_Priority">
             <subNodes>
                 <!-- Despawned -->

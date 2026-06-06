@@ -9,6 +9,8 @@ public class HediffComp_HealingSmoke : HediffComp
 
     public override void CompPostTick(ref float severityAdjustment)
     {
+        if (Pawn == null || Pawn.Dead)
+            return;
         if (Pawn.IsHashIntervalTick(BulwarkonMechanoid.settings.SmokeHealIntervalTicks))
         {
             TendOneInjury();

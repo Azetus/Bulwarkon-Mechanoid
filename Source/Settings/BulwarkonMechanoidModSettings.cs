@@ -36,7 +36,7 @@ public class BulwarkonMechanoidModSettings : ModSettings
     {
         var def = BM_BulwarkonDefOfs.Mech_Bulwarkon;
         if (def == null) return;
-        var props = def.comps.OfType<CompProperties_BulwarkonShieldInterceptor>().FirstOrDefault();
+        var props = def.comps?.OfType<CompProperties_BulwarkonShieldInterceptor>().FirstOrDefault();
         if (props == null) return;
         props.radius = ShieldRadius;
         props.hitPoints = ShieldHitPoints;

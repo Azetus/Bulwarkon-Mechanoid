@@ -6,7 +6,7 @@ namespace BM_BulwarkonMechanoid.Settings;
 
 public class BulwarkonMechanoidModSettings : ModSettings
 {
-    public float ShieldRadius = 3;
+    public float ShieldRadius = 4;
     public int ShieldHitPoints = 2000;
     public int chargeDurationTicks = 1800;
     public int ShieldHitPointsPerInterval = 1;
@@ -20,7 +20,7 @@ public class BulwarkonMechanoidModSettings : ModSettings
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Values.Look(ref ShieldRadius, nameof(ShieldRadius), 3);
+        Scribe_Values.Look(ref ShieldRadius, nameof(ShieldRadius), 4);
         Scribe_Values.Look(ref ShieldHitPoints, nameof(ShieldHitPoints), 2000);
         Scribe_Values.Look(ref chargeDurationTicks, nameof(chargeDurationTicks), 1800);
         Scribe_Values.Look(ref ShieldHitPointsPerInterval, nameof(ShieldHitPointsPerInterval), 1);
@@ -47,7 +47,7 @@ public class BulwarkonMechanoidModSettings : ModSettings
     
     public void ResetToDefaults()
     {
-        ShieldRadius = 3;
+        ShieldRadius = 4;
         ShieldHitPoints = 2000;
         chargeDurationTicks = 1800;
         ShieldHitPointsPerInterval = 1;

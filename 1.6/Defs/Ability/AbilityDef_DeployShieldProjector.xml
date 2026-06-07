@@ -10,19 +10,20 @@
         <gizmoClass>BM_BulwarkonMechanoid.Gizmos.Command_AbilityWithReload</gizmoClass>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <iconPath>Things/Building/Security/BroadshieldProjector</iconPath>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0</warmupTime>
             <requireLineOfSight>false</requireLineOfSight>
             <drawAimPie>false</drawAimPie>
-            <range>3.9</range>
+            <range>5</range>
             <targetParams>
                 <canTargetSelf>true</canTargetSelf>
             </targetParams>
         </verbProperties>
         <comps>
             <li Class="BM_BulwarkonMechanoid.AbilityEffects.CompProperties_DeployBulwarkonShieldProjector">
-                <shieldProjectorDef>Bulwarkon_ShieldProjector</shieldProjectorDef>
+                <shieldProjectorDef>BM_ShieldProjector</shieldProjectorDef>
                 <baseReloadTicks>60</baseReloadTicks>
                 <deployEffect>BulletShieldGenerator_Reactivate</deployEffect>
                 <deploySound>Broadshield_Startup</deploySound>

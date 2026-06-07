@@ -2,7 +2,7 @@
 <Defs>
 
     <ThingDef ParentName="BuildingBase">
-        <defName>Bulwarkon_ShieldProjector</defName>
+        <defName>BM_ShieldProjector</defName>
         <label>shield projector</label>
         <description>A deployed shield projector that creates a momentum-repulsor field capable of stopping incoming projectiles.
             Burns out after a short time.</description>
@@ -24,8 +24,8 @@
             </damageData>
         </graphicData>
         <statBases>
-            <MaxHitPoints>250</MaxHitPoints>
-            <Flammability>0.5</Flammability>
+            <MaxHitPoints>500</MaxHitPoints>
+            <Flammability>0</Flammability>
         </statBases>
         <tickerType>Normal</tickerType>
         <killedLeavings/>
@@ -44,15 +44,16 @@
         </building>
         <comps>
             <li Class="CompProperties_ProjectileInterceptor">
-                <radius>3.9</radius>
+                <radius>5</radius>
                 <interceptGroundProjectiles>true</interceptGroundProjectiles>
                 <interceptAirProjectiles>true</interceptAirProjectiles>
                 <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
                 <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+                <drawWithNoSelection>true</drawWithNoSelection>
                 <color>(0.4, 0.4, 0.4)</color>
                 <idlePulseSpeed>3</idlePulseSpeed>
                 <minIdleAlpha>0.05</minIdleAlpha>
-                <disarmedByEmpForTicks>600</disarmedByEmpForTicks>
+                <disarmedByEmpForTicks>0</disarmedByEmpForTicks>
                 <activeSound>Broadshield_Ambience</activeSound>
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
@@ -73,8 +74,8 @@
         <passability>Standable</passability>
         <fillPercent>0.35</fillPercent>
         <statBases>
-            <MaxHitPoints>250</MaxHitPoints>
-            <Flammability>0.5</Flammability>
+            <MaxHitPoints>1000</MaxHitPoints>
+            <Flammability>0</Flammability>
         </statBases>
         <tickerType>Normal</tickerType>
         <killedLeavings/>
@@ -85,9 +86,16 @@
         <repairEffect>ConstructMetal</repairEffect>
         <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
         <graphicData>
-            <texPath>Things/Building/Security/BroadshieldProjector</texPath>
+            <texPath>Things/BM_HealingSmokeGenerator</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.7</drawSize>
+            <shadowData>
+                <volume>(0.3, 0.2, 0.3)</volume>
+                <offset>(0,0,-0.1)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
         </graphicData>
         <building>
             <claimable>false</claimable>

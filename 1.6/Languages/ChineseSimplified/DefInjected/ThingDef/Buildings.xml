@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-    <Bulwarkon_ShieldProjector.label>护盾投影仪</Bulwarkon_ShieldProjector.label>
-    <Bulwarkon_ShieldProjector.description>一台部署后的护盾投影仪，可生成动量排斥场来拦截袭来的投射物。\n持续一小段时间后烧毁。</Bulwarkon_ShieldProjector.description>
+    <BM_ShieldProjector.label>护盾投影仪</BM_ShieldProjector.label>
+    <BM_ShieldProjector.description>一台部署后的护盾投影仪，可生成动量排斥场来拦截袭来的投射物。\n持续一小段时间后烧毁。</BM_ShieldProjector.description>
     <BM_HealingSmokeGenerator.label>治愈烟雾发生器</BM_HealingSmokeGenerator.label>
     <BM_HealingSmokeGenerator.description>一台部署后的装置，能释放治愈烟雾，包扎伤口并缓慢修复半径范围内所有单位的伤势。</BM_HealingSmokeGenerator.description>
 </LanguageData>

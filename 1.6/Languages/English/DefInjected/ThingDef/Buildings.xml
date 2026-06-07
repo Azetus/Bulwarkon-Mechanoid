@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-    <Bulwarkon_ShieldProjector.label>shield projector</Bulwarkon_ShieldProjector.label>
-    <Bulwarkon_ShieldProjector.description>A deployed shield projector that creates a momentum-repulsor field capable of stopping incoming projectiles.\nBurns out after a short time.</Bulwarkon_ShieldProjector.description>
+    <BM_ShieldProjector.label>shield projector</BM_ShieldProjector.label>
+    <BM_ShieldProjector.description>A deployed shield projector that creates a momentum-repulsor field capable of stopping incoming projectiles.\nBurns out after a short time.</BM_ShieldProjector.description>
     <BM_HealingSmokeGenerator.label>healing smoke generator</BM_HealingSmokeGenerator.label>
     <BM_HealingSmokeGenerator.description>A deployed device that emits healing smoke, tending wounds and slowly mending injuries of anyone within its radius.</BM_HealingSmokeGenerator.description>
 </LanguageData>

@@ -21,10 +21,10 @@ public class HediffComp_HealingSmoke : HediffComp
 
     private void TendOneInjury()
     {
-        var injury = Pawn.health.hediffSet.hediffs
-            .Find(h => h.TendableNow()) as Hediff_Injury;
-        if (injury != null)
-            injury.Tended(Props.tendQuality, Props.tendMaxQuality, 0);
+        var hediff = Pawn.health.hediffSet.hediffs
+            .Find(h => h.TendableNow());
+        if (hediff != null)
+            hediff.Tended(Props.tendQuality, Props.tendMaxQuality, 0);
     }
 
     private void HealOneInjury()

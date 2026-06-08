@@ -46,7 +46,7 @@ public class ModSettingDrawer
         listing.Gap(Gap);
         listing.GapLine();
 
-        DrawIntSliderRow(listing, "BM_SmokeHealInterval".Translate(), ref BulwarkonMechanoid.settings.SmokeHealIntervalTicks, 60, 6000);
+        DrawIntSliderRow(listing, "BM_SmokeHealInterval".Translate(), ref BulwarkonMechanoid.settings.SmokeHealIntervalTicks, 1, 6000);
 
         listing.Gap(Gap);
 

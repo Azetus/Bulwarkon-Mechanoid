@@ -6,6 +6,8 @@
         <race>Mech_Bulwarkon</race>
         <combatPower>150</combatPower>
         <allowInMechClusters>false</allowInMechClusters>
+        <isFighter>false</isFighter>
+        <appearsRandomlyInCombatGroups>false</appearsRandomlyInCombatGroups>
         <ecoSystemWeight>0</ecoSystemWeight>
         <lifeStages>
             <li>

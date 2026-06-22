@@ -3,7 +3,7 @@
     <ThingDef ParentName="BaseMechanoidWalker">
         <defName>Mech_Bulwarkon</defName>
         <label>BulwarkonMechanoid</label>
-        <description>description BulwarkonMechanoid</description>
+        <description>A heavy mechanoid equipped with a full-angle shield projector. Its shield can intercept both ground and air projectiles. Can deploy portable shield projectors and healing smoke generators.</description>
         <statBases>
             <MarketValue>1200</MarketValue>
             <MoveSpeed>6</MoveSpeed>

@@ -67,7 +67,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>BM_HealingSmokeGenerator</defName>
         <label>healing smoke generator</label>
-        <description>healing smoke generator</description>
+        <description>A deployed device that emits healing smoke, tending wounds and slowly mending injuries of anyone within its radius.</description>
         <altitudeLayer>BuildingOnTop</altitudeLayer>
         <drawerType>MapMeshAndRealTime</drawerType>
         <pathCost>0</pathCost>
@@ -86,7 +86,7 @@
         <repairEffect>ConstructMetal</repairEffect>
         <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
         <graphicData>
-            <texPath>Things/BM_HealingSmokeGenerator</texPath>
+            <texPath>Building/BM_HealingSmokeGenerator</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.7</drawSize>
             <shadowData>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
     <BM_BulwarkonMechanoid_ModTitle>堡垒盾卫</BM_BulwarkonMechanoid_ModTitle>
-    <BM_SettingsHint>部分设置需要点击应用设置后才能生效。</BM_SettingsHint>
     <BM_ShieldRadius>护盾半径</BM_ShieldRadius>
     <BM_ShieldHP>护盾盾量</BM_ShieldHP>
     <BM_ChargeDurationTicks>护盾破碎后充能时间（ticks）</BM_ChargeDurationTicks>
@@ -19,6 +18,4 @@
     <BM_SmokeHealInterval>烟雾治疗间隔（ticks）</BM_SmokeHealInterval>
     <BM_SmokeHealAmount>每次治疗恢复量</BM_SmokeHealAmount>
     <BM_ResetDefaults>重置为默认</BM_ResetDefaults>
-    <BM_ApplySettings>应用设置</BM_ApplySettings>
-    <BM_SettingsApplied>设置已应用。</BM_SettingsApplied>
 </LanguageData>

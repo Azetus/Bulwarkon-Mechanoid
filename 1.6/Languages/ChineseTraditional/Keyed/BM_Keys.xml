@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
     <BM_BulwarkonMechanoid_ModTitle>堡壘盾衛</BM_BulwarkonMechanoid_ModTitle>
-    <BM_SettingsHint>部分設定需要點擊套用設定後才能生效。</BM_SettingsHint>
     <BM_ShieldRadius>護盾半徑</BM_ShieldRadius>
     <BM_ShieldHP>護盾盾量</BM_ShieldHP>
     <BM_ChargeDurationTicks>護盾破碎後充能時間（ticks）</BM_ChargeDurationTicks>
@@ -19,6 +18,4 @@
     <BM_SmokeHealInterval>煙霧治療間隔（ticks）</BM_SmokeHealInterval>
     <BM_SmokeHealAmount>每次治療恢復量</BM_SmokeHealAmount>
     <BM_ResetDefaults>重設為預設</BM_ResetDefaults>
-    <BM_ApplySettings>套用設定</BM_ApplySettings>
-    <BM_SettingsApplied>設定已套用。</BM_SettingsApplied>
 </LanguageData>

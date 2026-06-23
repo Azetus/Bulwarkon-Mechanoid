@@ -15,10 +15,6 @@ public class ModSettingDrawer
         Listing_Standard listing = new();
         listing.Begin(inRect);
 
-        GUI.color = Color.yellow;
-        Widgets.Label(listing.GetRect(30f), "BM_SettingsHint".Translate());
-        GUI.color = Color.white;
-
         listing.Gap(Gap);
 
         DrawSliderRow(listing, "BM_ShieldRadius".Translate(), ref BulwarkonMechanoid.settings.ShieldRadius, 3f, 13f);
@@ -75,20 +71,9 @@ public class ModSettingDrawer
 
         listing.Gap(Gap);
 
-        Rect buttonRowRect = listing.GetRect(ButtonHeight);
-        Rect resetRect = buttonRowRect.LeftPart(0.30f);
-        Rect applyRect = buttonRowRect.RightPart(0.30f);
-
-        if (Widgets.ButtonText(resetRect, "BM_ResetDefaults".Translate()))
+        if (Widgets.ButtonText(listing.GetRect(ButtonHeight), "BM_ResetDefaults".Translate()))
         {
             BulwarkonMechanoid.settings.ResetToDefaults();
-        }
-
-        if (Widgets.ButtonText(applyRect, "BM_ApplySettings".Translate()))
-        {
-            BulwarkonMechanoid.settings.ApplyToDefs();
-            BulwarkonMechanoid.settings.Mod.WriteSettings();
-            Messages.Message("BM_SettingsApplied".Translate(), MessageTypeDefOf.NeutralEvent, false);
         }
 
         listing.End();

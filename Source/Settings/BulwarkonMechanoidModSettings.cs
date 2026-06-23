@@ -30,6 +30,11 @@ public class BulwarkonMechanoidModSettings : ModSettings
         Scribe_Values.Look(ref SmokeAmmo, nameof(SmokeAmmo), SmokeAmmoType.MedicineUltratech);
         Scribe_Values.Look(ref SmokeHealIntervalTicks, nameof(SmokeHealIntervalTicks), 60);
         Scribe_Values.Look(ref SmokeHealAmount, nameof(SmokeHealAmount), 1);
+
+        if (Scribe.mode == LoadSaveMode.Saving)
+        {
+            ApplyToDefs();
+        }
     }
 
     public void ApplyToDefs()

@@ -10,7 +10,7 @@
         <gizmoClass>BM_BulwarkonMechanoid.Gizmos.Command_AbilityWithReload</gizmoClass>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
-        <iconPath>Building/BM_HealingSmokeGenerator</iconPath>
+        <iconPath>Icons/BM_HealingSmokeGenerator_Icon</iconPath>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0</warmupTime>

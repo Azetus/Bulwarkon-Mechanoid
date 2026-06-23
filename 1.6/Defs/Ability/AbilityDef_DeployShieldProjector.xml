@@ -10,7 +10,7 @@
         <gizmoClass>BM_BulwarkonMechanoid.Gizmos.Command_AbilityWithReload</gizmoClass>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
-        <iconPath>Things/Building/Security/BroadshieldProjector</iconPath>
+        <iconPath>Icons/BM_ShieldProjector_Icon</iconPath>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0</warmupTime>

@@ -25,4 +25,5 @@
     <description>
         Bulwarkon Mechanoid
     </description>
+    <modIconPath IgnoreIfNoMatchingField="True">Icons/BM_Bulwarkon_ModIcon</modIconPath>
 </ModMetaData>

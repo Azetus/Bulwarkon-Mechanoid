@@ -5,6 +5,7 @@
         <label>deploy healing smoke generator</label>
         <description>Deploy a healing smoke generator at the caster''s feet. The generator continuously tends wounds and heals anyone within its radius for 30 seconds.\n\nHas 3 charges. Can be reloaded by consuming glitterworld medicine (right-click to reload).</description>
         <charges>3</charges>
+        <aiCanUse>false</aiCanUse>
         <targetRequired>false</targetRequired>
         <abilityClass>BM_BulwarkonMechanoid.CustomAbility.Ability_Reloadable</abilityClass>
         <gizmoClass>BM_BulwarkonMechanoid.Gizmos.Command_AbilityWithReload</gizmoClass>

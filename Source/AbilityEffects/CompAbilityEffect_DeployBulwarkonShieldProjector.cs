@@ -67,7 +67,7 @@ public class CompAbilityEffect_DeployBulwarkonShieldProjector : CompAbilityEffec
     #endregion
 
 
-    public JobDef ReloadJobDef => BM_BulwarkonDefOfs.BM_ReloadShieldProjector;
+    public JobDef ReloadJobDef => BM_BulwarkonJobDefOfs.BM_ReloadShieldProjector;
 
     public void StartReloadJob(bool showMessages) =>
         TryStartReloadJob(this, showMessages);

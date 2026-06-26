@@ -5,6 +5,7 @@
         <label>deploy shield projector</label>
         <description>Deploy a portable shield projector at the caster''s feet. The projector creates a momentum-repulsor field that intercepts enemy projectiles for a limited time.\n\nHas 3 charges. Can be reloaded by consuming a shield core (right-click to reload).</description>
         <charges>3</charges>
+        <aiCanUse>true</aiCanUse>
         <targetRequired>false</targetRequired>
         <abilityClass>BM_BulwarkonMechanoid.CustomAbility.Ability_Reloadable</abilityClass>
         <gizmoClass>BM_BulwarkonMechanoid.Gizmos.Command_AbilityWithReload</gizmoClass>

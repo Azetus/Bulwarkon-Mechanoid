@@ -20,11 +20,11 @@ public class ModSettingDrawer
         DrawSliderRow(listing, "BM_ShieldRadius".Translate(), ref BulwarkonMechanoid.settings.ShieldRadius, 3f, 13f);
 
         listing.Gap(Gap);
-        
+
         DrawIntSliderRow(listing, "BM_ShieldHP".Translate(), ref BulwarkonMechanoid.settings.ShieldHitPoints, 200, 10000);
 
         listing.Gap(Gap);
-        
+
         DrawIntSliderRow(listing, "BM_ChargeDurationTicks".Translate(), ref BulwarkonMechanoid.settings.chargeDurationTicks, 0, 18000);
 
         listing.Gap(Gap);
@@ -33,7 +33,8 @@ public class ModSettingDrawer
 
         listing.Gap(Gap);
 
-        DrawIntSliderRow(listing, "BM_ShieldRechargeIntervalTicks".Translate(), ref BulwarkonMechanoid.settings.RechargeHitPointsIntervalTicks, 1, 1800);
+        DrawIntSliderRow(listing, "BM_ShieldRechargeIntervalTicks".Translate(), ref BulwarkonMechanoid.settings.RechargeHitPointsIntervalTicks, 1,
+            1800);
 
         listing.Gap(Gap);
 
@@ -53,21 +54,26 @@ public class ModSettingDrawer
 
         listing.Label("BM_ShieldAmmoLabel".Translate());
         if (listing.RadioButton("BM_ShieldAmmoShieldCore".Translate(),
-            BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.BroadshieldCore))
+                BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.BroadshieldCore))
             BulwarkonMechanoid.settings.ShieldAmmo = ShieldAmmoType.BroadshieldCore;
         if (listing.RadioButton("BM_ShieldAmmoAdvancedComponent".Translate(),
-            BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.AdvancedComponent))
+                BulwarkonMechanoid.settings.ShieldAmmo == ShieldAmmoType.AdvancedComponent))
             BulwarkonMechanoid.settings.ShieldAmmo = ShieldAmmoType.AdvancedComponent;
 
         listing.GapLine();
 
         listing.Label("BM_SmokeAmmoLabel".Translate());
         if (listing.RadioButton("BM_SmokeAmmoUltratech".Translate(),
-            BulwarkonMechanoid.settings.SmokeAmmo == SmokeAmmoType.MedicineUltratech))
+                BulwarkonMechanoid.settings.SmokeAmmo == SmokeAmmoType.MedicineUltratech))
             BulwarkonMechanoid.settings.SmokeAmmo = SmokeAmmoType.MedicineUltratech;
         if (listing.RadioButton("BM_SmokeAmmoRegular".Translate(),
-            BulwarkonMechanoid.settings.SmokeAmmo == SmokeAmmoType.MedicineIndustrial))
+                BulwarkonMechanoid.settings.SmokeAmmo == SmokeAmmoType.MedicineIndustrial))
             BulwarkonMechanoid.settings.SmokeAmmo = SmokeAmmoType.MedicineIndustrial;
+
+        listing.Gap(Gap);
+        listing.GapLine();
+
+        listing.CheckboxLabeled("BM_AllowHostileBulwarkon".Translate(), ref BulwarkonMechanoid.settings.AllowHostileBulwarkon);
 
         listing.Gap(Gap);
 
@@ -92,7 +98,7 @@ public class ModSettingDrawer
         );
 
         Widgets.Label(labelRect, label);
-        value = Widgets.HorizontalSlider(sliderRect, value, min, max, true,value.ToString("0.00"));
+        value = Widgets.HorizontalSlider(sliderRect, value, min, max, true, value.ToString("0.00"));
         string buffer = value.ToString("0.00");
         Widgets.TextFieldNumeric(inputRect, ref value, ref buffer, min, max);
     }

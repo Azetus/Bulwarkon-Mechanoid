@@ -4,7 +4,7 @@
         <defName>Mech_Bulwarkon</defName>
         <label>BulwarkonMechanoid</label>
         <race>Mech_Bulwarkon</race>
-        <combatPower>150</combatPower>
+        <combatPower>200</combatPower>
         <allowInMechClusters>false</allowInMechClusters>
         <isFighter>false</isFighter>
         <appearsRandomlyInCombatGroups>false</appearsRandomlyInCombatGroups>

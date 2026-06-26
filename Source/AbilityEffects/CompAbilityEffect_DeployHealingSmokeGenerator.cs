@@ -65,7 +65,7 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
 
     #endregion
 
-    public JobDef ReloadJobDef => BM_BulwarkonDefOfs.BM_ReloadHealingSmokeGenerator;
+    public JobDef ReloadJobDef => BM_BulwarkonJobDefOfs.BM_ReloadHealingSmokeGenerator;
 
     public void StartReloadJob(bool showMessages) =>
         TryStartReloadJob(this, showMessages);

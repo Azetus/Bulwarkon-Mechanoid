@@ -18,4 +18,5 @@
     <BM_SmokeHealInterval>烟雾治疗间隔（ticks）</BM_SmokeHealInterval>
     <BM_SmokeHealAmount>每次治疗恢复量</BM_SmokeHealAmount>
     <BM_ResetDefaults>重置为默认</BM_ResetDefaults>
+    <BM_AllowHostileBulwarkon>允许敌对堡垒盾卫生成</BM_AllowHostileBulwarkon>
 </LanguageData>

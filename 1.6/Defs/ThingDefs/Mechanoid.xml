@@ -70,6 +70,10 @@
                 </li>
             </detritusLeavings>
         </race>
+        <killedLeavingsPlayerHostile>
+            <BroadshieldCore>1</BroadshieldCore>
+            <MedicineUltratech>1</MedicineUltratech>
+        </killedLeavingsPlayerHostile>
         <comps>
             <li Class="BM_BulwarkonMechanoid.Comps.CompProperties_BulwarkonShieldInterceptor">
                 <interceptGroundProjectiles>true</interceptGroundProjectiles>

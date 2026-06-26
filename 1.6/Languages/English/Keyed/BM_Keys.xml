@@ -18,4 +18,5 @@
     <BM_SmokeHealInterval>Smoke heal interval (ticks)</BM_SmokeHealInterval>
     <BM_SmokeHealAmount>Smoke heal amount per interval</BM_SmokeHealAmount>
     <BM_ResetDefaults>Reset to defaults</BM_ResetDefaults>
+    <BM_AllowHostileBulwarkon>Allow hostile Bulwarkon spawns</BM_AllowHostileBulwarkon>
 </LanguageData>

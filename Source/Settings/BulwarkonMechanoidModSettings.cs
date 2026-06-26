@@ -16,6 +16,7 @@ public class BulwarkonMechanoidModSettings : ModSettings
     public SmokeAmmoType SmokeAmmo = SmokeAmmoType.MedicineUltratech;
     public int SmokeHealIntervalTicks = 60;
     public int SmokeHealAmount = 1;
+    public bool AllowHostileBulwarkon = false;
 
     public override void ExposeData()
     {
@@ -30,16 +31,23 @@ public class BulwarkonMechanoidModSettings : ModSettings
         Scribe_Values.Look(ref SmokeAmmo, nameof(SmokeAmmo), SmokeAmmoType.MedicineUltratech);
         Scribe_Values.Look(ref SmokeHealIntervalTicks, nameof(SmokeHealIntervalTicks), 60);
         Scribe_Values.Look(ref SmokeHealAmount, nameof(SmokeHealAmount), 1);
+        Scribe_Values.Look(ref AllowHostileBulwarkon, nameof(AllowHostileBulwarkon), false);
 
         if (Scribe.mode == LoadSaveMode.Saving)
         {
             ApplyToDefs();
+            ApplyToPawnKind();
+        }
+
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            LongEventHandler.ExecuteWhenFinished(ApplyToPawnKind);
         }
     }
 
     public void ApplyToDefs()
     {
-        var def = BM_BulwarkonDefOfs.Mech_Bulwarkon;
+        var def = BM_BulwarkonThingDefOfs.Mech_Bulwarkon;
         if (def == null) return;
         var props = def.comps?.OfType<CompProperties_BulwarkonShieldInterceptor>().FirstOrDefault();
         if (props == null) return;
@@ -49,7 +57,16 @@ public class BulwarkonMechanoidModSettings : ModSettings
         props.rechargeHitPointsIntervalTicks = RechargeHitPointsIntervalTicks;
         props.disarmedByEmpForTicks = DisarmedByEmpForTicks;
     }
-    
+
+    public void ApplyToPawnKind()
+    {
+        var pawnKind = BM_BulwarkonPawnKindDefOfs.Mech_Bulwarkon;
+        if (pawnKind == null) return;
+        pawnKind.isFighter = AllowHostileBulwarkon;
+        pawnKind.allowInMechClusters = AllowHostileBulwarkon;
+        pawnKind.appearsRandomlyInCombatGroups = AllowHostileBulwarkon;
+    }
+
     public void ResetToDefaults()
     {
         ShieldRadius = 4;
@@ -62,5 +79,6 @@ public class BulwarkonMechanoidModSettings : ModSettings
         SmokeAmmo = SmokeAmmoType.MedicineUltratech;
         SmokeHealIntervalTicks = 60;
         SmokeHealAmount = 1;
+        AllowHostileBulwarkon = false;
     }
 }

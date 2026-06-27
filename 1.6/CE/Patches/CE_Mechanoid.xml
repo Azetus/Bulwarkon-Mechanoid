@@ -124,4 +124,58 @@
         </value>
     </Operation>
 
+    <!-- ========== Light Defense Weapon (CE) ========== -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>BM_LightDefenseWeapon</defName>
+        <statBases>
+            <Bulk>3.00</Bulk>
+            <SightsEfficiency>0.60</SightsEfficiency>
+            <SwayFactor>1.0</SwayFactor>
+            <ShotSpread>0.20</ShotSpread>
+            <RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+        </statBases>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+            <warmupTime>2.5</warmupTime>
+            <range>24.9</range>
+            <burstShotCount>1</burstShotCount>
+            <soundCast>Shot_Revolver</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+            <muzzleFlashScale>6</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>16</magazineSize>
+            <reloadTime>4.0</reloadTime>
+            <ammoSet>AmmoSet_45ACP</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>Snapshot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_BROOM</li>
+            <li>NoSwitch</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Melee tools: CE ToolCE -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="BM_LightDefenseWeapon"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>6</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
 </Patch>

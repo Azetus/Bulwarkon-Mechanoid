@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BM_LightDefenseWeapon.label>light defense weapon</BM_LightDefenseWeapon.label>
+    <BM_LightDefenseWeapon.description>A built-in light defensive weapon designed for the Bulwarkon. It deals minimal damage, serving primarily to keep enemies at a distance while the shield system provides protection.</BM_LightDefenseWeapon.description>
+    <BM_Bullet_LightDefenseWeapon.label>light defense bullet</BM_Bullet_LightDefenseWeapon.label>
+</LanguageData>

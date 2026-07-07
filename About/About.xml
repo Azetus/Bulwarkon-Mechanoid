@@ -21,6 +21,8 @@
         <li>Ludeon.RimWorld.Biotech</li>
         <li>Ludeon.RimWorld.Royalty</li>
         <li>CETeam.CombatExtended</li>
+        <li>GoGaTio.MechanoidUpgrades</li>
+        <li>smartworkmode.1trickPwnyta</li>
     </loadAfter>
     <description>
         Bulwarkon Mechanoid

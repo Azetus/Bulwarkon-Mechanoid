@@ -5,6 +5,7 @@
     <packageId>Aliza.BulwarkonMechanoid</packageId>
     <supportedVersions>
         <li>1.6</li>
+        <li>1.7</li>
     </supportedVersions>
     <modDependencies>
         <li>
@@ -28,4 +29,5 @@
         Bulwarkon Mechanoid
     </description>
     <modIconPath IgnoreIfNoMatchingField="True">Icons/BM_Bulwarkon_ModIcon</modIconPath>
+    <modVersion IgnoreIfNoMatchingField="True">1.1.1</modVersion>
 </ModMetaData>

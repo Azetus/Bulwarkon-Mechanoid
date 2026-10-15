@@ -12,7 +12,8 @@ public class JobGiver_AutoReloadAbilities : ThinkNode_JobGiver
 
     protected override Job TryGiveJob(Pawn pawn)
     {
-        if (pawn.Drafted) return null;
+        if (pawn.Drafted || !pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
+            return null;
 
         foreach (var reloadable in AbilityReloadUtility.GetReloadableAbilities(pawn))
         {

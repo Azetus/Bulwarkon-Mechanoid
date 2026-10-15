@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ========== Race Extension ========== -->
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]</xpath>
+        <value>
+            <li Class="CombatExtended.RacePropertiesExtensionCE">
+                <bodyShape>Humanoid</bodyShape>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- ========== Base Stats ========== -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>40</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>70</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]/statBases/ArmorRating_Heat</xpath>
+        <value>
+            <ArmorRating_Heat>0.35</ArmorRating_Heat>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]/statBases</xpath>
+        <value>
+            <CarryWeight>100</CarryWeight>
+            <CarryBulk>40</CarryBulk>
+            <MeleeDodgeChance>0.05</MeleeDodgeChance>
+            <MeleeCritChance>0.1</MeleeCritChance>
+            <MeleeParryChance>0.12</MeleeParryChance>
+            <MaxHitPoints>400</MaxHitPoints>
+        </value>
+    </Operation>
+
+    <!-- ========== Melee Tools ========== -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>left fist</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.26</cooldownTime>
+                    <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                    <armorPenetrationSharp>0</armorPenetrationSharp>
+                    <armorPenetrationBlunt>2.5</armorPenetrationBlunt>
+                    <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>right fist</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.26</cooldownTime>
+                    <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                    <armorPenetrationSharp>0</armorPenetrationSharp>
+                    <armorPenetrationBlunt>2.5</armorPenetrationBlunt>
+                    <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>head</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>2.2</cooldownTime>
+                    <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                    <chanceFactor>0.2</chanceFactor>
+                    <armorPenetrationSharp>0</armorPenetrationSharp>
+                    <armorPenetrationBlunt>4</armorPenetrationBlunt>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!--  护甲耐久  -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]</xpath>
+            <value>
+                <comps/>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Mech_Bulwarkon"]/comps</xpath>
+        <value>
+            <li Class="CombatExtended.CompProperties_ArmorDurability">
+                <Durability>4500</Durability>
+                <Regenerates>true</Regenerates>
+                <RegenInterval>1250</RegenInterval>
+                <RegenValue>5</RegenValue>
+                <Repairable>true</Repairable>
+                <RepairIngredients>
+                    <Steel>5</Steel>
+                    <Plasteel>5</Plasteel>
+                </RepairIngredients>
+                <RepairTime>300</RepairTime>
+                <RepairValue>200</RepairValue>
+                <MinArmorPct>0.5</MinArmorPct>
+                <MinArmorValueSharp>12</MinArmorValueSharp>
+                <MinArmorValueBlunt>27</MinArmorValueBlunt>
+                <MinArmorValueHeat>0.2</MinArmorValueHeat>
+            </li>
+        </value>
+    </Operation>
+
+    <!-- ========== Light Defense Weapon (CE) ========== -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>BM_LightDefenseWeapon</defName>
+        <statBases>
+            <Bulk>3.00</Bulk>
+            <SightsEfficiency>0.60</SightsEfficiency>
+            <SwayFactor>1.0</SwayFactor>
+            <ShotSpread>0.20</ShotSpread>
+            <RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+        </statBases>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+            <warmupTime>2.5</warmupTime>
+            <range>24.9</range>
+            <burstShotCount>1</burstShotCount>
+            <soundCast>Shot_Revolver</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+            <muzzleFlashScale>6</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>16</magazineSize>
+            <reloadTime>4.0</reloadTime>
+            <ammoSet>AmmoSet_45ACP</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>Snapshot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_BROOM</li>
+            <li>NoSwitch</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Melee tools: CE ToolCE -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="BM_LightDefenseWeapon"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>6</power>
+                    <cooldownTime>2.0</cooldownTime>
+                    <armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+</Patch>

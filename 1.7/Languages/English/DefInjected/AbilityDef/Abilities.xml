@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BM_DeployShieldProjector.label>deploy shield projector</BM_DeployShieldProjector.label>
+    <BM_DeployShieldProjector.description>Deploy a portable shield projector. The projector creates a momentum-repulsor field that intercepts enemy projectiles for a limited time.\n\nHas 3 charges. Can be reloaded by consuming a shield core (right-click to reload).</BM_DeployShieldProjector.description>
+    <BM_DeployHealingSmokeGenerator.label>deploy healing smoke generator</BM_DeployHealingSmokeGenerator.label>
+    <BM_DeployHealingSmokeGenerator.description>Deploy a healing smoke generator. The generator continuously tends wounds and heals anyone within its radius for 30 seconds.\n\nHas 3 charges. Can be reloaded by consuming glitterworld medicine (right-click to reload).</BM_DeployHealingSmokeGenerator.description>
+</LanguageData>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BaseGun">
+        <defName>BM_LightDefenseWeapon</defName>
+        <label>light defense weapon</label>
+        <description>A built-in light defensive weapon designed for the Bulwarkon. It deals minimal damage, serving primarily to keep enemies at a distance while the shield system provides protection.</description>
+        <techLevel>Spacer</techLevel>
+        <destroyOnDrop>true</destroyOnDrop>
+        <tradeability>None</tradeability>
+        <relicChance>0</relicChance>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/MiniShotgun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.65</drawSize>
+        </graphicData>
+        <statBases>
+            <MarketValue>800</MarketValue>
+            <Mass>2.2</Mass>
+            <AccuracyTouch>0.60</AccuracyTouch>
+            <AccuracyShort>0.70</AccuracyShort>
+            <AccuracyMedium>0.65</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>BM_LightDefenseWeaponTag</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>RangedLight</li>
+        </weaponClasses>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>BM_Bullet_LightDefenseWeapon</defaultProjectile>
+                <warmupTime>2.5</warmupTime>
+                <range>24.9</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_Revolver</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>6</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>2.6</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>BM_Bullet_LightDefenseWeapon</defName>
+        <label>light defense bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationBase>0.10</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
+</Defs>

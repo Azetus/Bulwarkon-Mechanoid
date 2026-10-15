@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef>
+        <defName>BM_DeployShieldProjector</defName>
+        <label>deploy shield projector</label>
+        <description>Deploy a portable shield projector at the caster''s feet. The projector creates a momentum-repulsor field that intercepts enemy projectiles for a limited time.\n\nHas 3 charges. Can be reloaded by consuming a shield core (right-click to reload).</description>
+        <charges>3</charges>
+        <aiCanUse>true</aiCanUse>
+        <targetRequired>false</targetRequired>
+        <abilityClass>BM_BulwarkonMechanoid.CustomAbility.Ability_Reloadable</abilityClass>
+        <gizmoClass>BM_BulwarkonMechanoid.Gizmos.Command_AbilityWithReload</gizmoClass>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+        <iconPath>Icons/BM_ShieldProjector_Icon</iconPath>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0</warmupTime>
+            <requireLineOfSight>false</requireLineOfSight>
+            <drawAimPie>false</drawAimPie>
+            <range>5</range>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="BM_BulwarkonMechanoid.AbilityEffects.CompProperties_DeployBulwarkonShieldProjector">
+                <shieldProjectorDef>BM_ShieldProjector</shieldProjectorDef>
+                <baseReloadTicks>60</baseReloadTicks>
+                <deployEffect>BulletShieldGenerator_Reactivate</deployEffect>
+                <deploySound>Broadshield_Startup</deploySound>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

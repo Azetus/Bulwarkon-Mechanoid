@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BM_LightDefenseWeapon.label>輕型防衛武器</BM_LightDefenseWeapon.label>
+    <BM_LightDefenseWeapon.description>專為堡壘盾衛設計的內置輕型防衛武器。威力極低，主要用於阻止敵人靠近，配合護盾系統保護自身。</BM_LightDefenseWeapon.description>
+    <BM_Bullet_LightDefenseWeapon.label>輕型防衛子彈</BM_Bullet_LightDefenseWeapon.label>
+</LanguageData>

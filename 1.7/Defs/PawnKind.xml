@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <PawnKindDef ParentName="BaseMechanoidKind">
+        <defName>Mech_Bulwarkon</defName>
+        <label>BulwarkonMechanoid</label>
+        <race>Mech_Bulwarkon</race>
+        <combatPower>200</combatPower>
+        <weaponMoney>9999~9999</weaponMoney>
+        <allowInMechClusters>false</allowInMechClusters>
+        <isFighter>false</isFighter>
+        <appearsRandomlyInCombatGroups>false</appearsRandomlyInCombatGroups>
+        <ecoSystemWeight>0</ecoSystemWeight>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Mechanoid/BM_Bulwarkon</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <drawSize>1.5</drawSize>
+                </bodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Mechanoid/BM_Bulwarkon</texPath>
+                    <shaderType>CutoutWithOverlay</shaderType>
+                    <drawSize>1.5</drawSize>
+                </bodyGraphicData>
+            </li>
+        </lifeStages>
+        <techHediffsChance>1</techHediffsChance>
+        <techHediffsMoney>9999~9999</techHediffsMoney>
+        <controlGroupPortraitZoom>1.2</controlGroupPortraitZoom>
+        <weaponTags>
+            <li>BM_LightDefenseWeaponTag</li>
+        </weaponTags>
+        <abilities>
+            <li>BM_DeployShieldProjector</li>
+            <li>BM_DeployHealingSmokeGenerator</li>
+        </abilities>
+    </PawnKindDef>
+</Defs>

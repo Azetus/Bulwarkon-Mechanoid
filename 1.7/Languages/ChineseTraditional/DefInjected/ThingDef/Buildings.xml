@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <BM_ShieldProjector.label>護盾投影儀</BM_ShieldProjector.label>
+    <BM_ShieldProjector.description>一台部署後的護盾投影儀，可生成動量排斥場來攔截襲來的投射物。\n持續一小段時間後燒毀。</BM_ShieldProjector.description>
+    <BM_HealingSmokeGenerator.label>治癒煙霧發生器</BM_HealingSmokeGenerator.label>
+    <BM_HealingSmokeGenerator.description>一台部署後的裝置，能釋放治癒煙霧，包紮傷口並緩慢修復半徑範圍內所有單位的傷勢。</BM_HealingSmokeGenerator.description>
+</LanguageData>

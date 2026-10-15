@@ -15,5 +15,8 @@
     <ItemGroup>
         <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633"/>
     </ItemGroup>
-    
+    <Target Name="BundleMod" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' and '$(DesignTimeBuild)' != 'true'">
+        <Exec Command="powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File &quot;$(MSBuildProjectDirectory)\..\Scripts\Bundle-Mod.ps1&quot;" />
+    </Target>
+
 </Project>

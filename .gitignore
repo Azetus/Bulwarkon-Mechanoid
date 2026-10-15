@@ -21,3 +21,5 @@
 
 *.kra~
 *.png~
+
+/bundle/

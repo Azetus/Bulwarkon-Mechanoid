@@ -48,7 +48,7 @@ public class CompAbilityEffect_DeployHealingSmokeGenerator : CompAbilityEffect, 
 
     public void ReloadFrom(Thing ammo)
     {
-        if (ammo == null || ammo.Destroyed) return;
+        if (ammo == null || ammo.Destroyed || ammo.def != AmmoDef) return;
         if (parent is not { UsesCharges: true } || parent.RemainingCharges >= parent.maxCharges)
             return;
 

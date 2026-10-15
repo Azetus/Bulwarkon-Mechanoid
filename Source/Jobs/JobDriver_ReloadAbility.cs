@@ -34,6 +34,12 @@ public class JobDriver_ReloadAbility : JobDriver
         this.FailOnIncapable(PawnCapacityDefOf.Manipulation);
         this.FailOn(() => reloadable == null);
         this.FailOn(() => !reloadable.NeedsReload(allowForceReload: true));
+        this.FailOn(() =>
+        {
+            // Target B is assigned when the next ammo stack is extracted from the queue.
+            Thing ammo = job.GetTarget(AmmoQueueIndex).Thing;
+            return ammo != null && ammo.def != reloadable.AmmoDef;
+        });
 
         Toil fetchNext = Toils_General.Label();
         yield return fetchNext;

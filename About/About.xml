@@ -29,5 +29,5 @@
         Bulwarkon Mechanoid
     </description>
     <modIconPath IgnoreIfNoMatchingField="True">Icons/BM_Bulwarkon_ModIcon</modIconPath>
-    <modVersion IgnoreIfNoMatchingField="True">1.1.1</modVersion>
+    <modVersion IgnoreIfNoMatchingField="True">1.1.2</modVersion>
 </ModMetaData>

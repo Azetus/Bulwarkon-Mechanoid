@@ -26,6 +26,7 @@
             <li Class="BM_BulwarkonMechanoid.AbilityEffects.CompProperties_DeployBulwarkonShieldProjector">
                 <shieldProjectorDef>BM_ShieldProjector</shieldProjectorDef>
                 <baseReloadTicks>60</baseReloadTicks>
+                <soundReload>Standard_Reload</soundReload>
                 <deployEffect>BulletShieldGenerator_Reactivate</deployEffect>
                 <deploySound>Broadshield_Startup</deploySound>
             </li>
